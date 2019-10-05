@@ -49,3 +49,10 @@ Deleted: sha256:2183b84cef51c03f45122ea74e50c6a1f7f75805faa37ed02486c0543540ff52
 ```console
 $ docker run -it ubuntu sh -c 'apt update;apt install -y curl;echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
+
+## 1.6
+```console
+$ docker build -f ./Dockerfile-1.6 -t docker-clock .
+$ docker run docker-clock
+```
+
