@@ -2,6 +2,8 @@ FROM ubuntu
 
 WORKDIR /usr/app
 
+ENV API_URL=http://localhost:8000
+
 RUN apt-get update \
   && apt-get install -y git \
   && git clone https://github.com/docker-hy/frontend-example-docker.git \
@@ -13,6 +15,7 @@ RUN apt-get update \
 
 COPY ./start-1.10.sh start.sh
 RUN chmod +x ./start.sh
+
 EXPOSE 5000
 
 ENTRYPOINT ["./start.sh"]
