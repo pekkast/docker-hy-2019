@@ -24,3 +24,23 @@ Give me the password: basics
 You found the correct password. Secret message is:
 "This is the secret message"
 ```
+
+## 1.4
+```console
+$ docker run -d --name=bash_sample devopsdockeruh/exec_bash_exercise
+$ docker exec -it bash_sample /bin/bash
+root@ede7d118e3de:/usr/app# tail -f ./logs.txt
+Secret message is:
+"Docker is easy"
+Sat, 05 Oct 2019 05:23:33 GMT
+Sat, 05 Oct 2019 05:23:36 GMT
+^C
+root@ede7d118e3de:/usr/app# exit
+$ docker stop bash_sample
+$ docker rm bash_sample
+$ docker rmi devopsdockeruh/exec_bash_exercise
+Untagged: devopsdockeruh/exec_bash_exercise:latest
+Untagged: devopsdockeruh/exec_bash_exercise@sha256:c463832132d1fb0b8b3b60348a6fc36fda7512a4ef2d1050e8bea7b6a6d7a2f3
+Deleted: sha256:489b6d8f2ab81ec84032c0e16deeded4862006b787353c740f1a4659f1b28a09
+Deleted: sha256:2183b84cef51c03f45122ea74e50c6a1f7f75805faa37ed02486c0543540ff52
+```
