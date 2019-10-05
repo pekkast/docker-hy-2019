@@ -63,3 +63,9 @@ $ docker run -it curler
 Input website:
 helsinki.fi
 ```
+
+## 1.8
+```console
+$ touch ./log-1.8.txt
+$ docker run -v $(pwd)/log-1.8.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+```
