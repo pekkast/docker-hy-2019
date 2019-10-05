@@ -106,3 +106,9 @@ $ docker run -d -p 5000:5000 npm-docker-front
 ```console
 $ docker build -f Dockerfile-1.13 -t spring-project .
 ```
+
+## 1.14
+```console
+$ docker build -f Dockerfile-1.14 -t rails-project .
+$ docker run -p 3000:3000 rails-project
+```
