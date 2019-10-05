@@ -44,3 +44,8 @@ Untagged: devopsdockeruh/exec_bash_exercise@sha256:c463832132d1fb0b8b3b60348a6fc
 Deleted: sha256:489b6d8f2ab81ec84032c0e16deeded4862006b787353c740f1a4659f1b28a09
 Deleted: sha256:2183b84cef51c03f45122ea74e50c6a1f7f75805faa37ed02486c0543540ff52
 ```
+
+## 1.5
+```console
+$ docker run -it ubuntu sh -c 'apt update;apt install -y curl;echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+```
