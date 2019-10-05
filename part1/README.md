@@ -69,3 +69,14 @@ helsinki.fi
 $ touch ./log-1.8.txt
 $ docker run -v $(pwd)/log-1.8.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
 ```
+
+## 1.9
+```console
+$ docker run -d -p 8002:80 devopsdockeruh/ports_exercise
+$ wget http://localhost:8002
+--2019-10-05 11:41:54--  http://localhost:8002/
+Selvitetään osoitetta localhost (localhost)... ::1, 127.0.0.1
+Yhdistetään palvelimeen localhost (localhost)|::1|:8002... yhdistetty.
+HTTP-pyyntö lähetetty, odotetaan vastausta... 200 OK
+Pituus: 28 [text/html]
+```
