@@ -1,0 +1,14 @@
+FROM ubuntu
+
+WORKDIR /usr/app
+
+RUN apt-get update \
+  && apt-get install -y git \
+  && git clone https://github.com/docker-hy/spring-example-project.git . \
+  && apt-get install -y default-jdk \
+  && ./mvnw package
+
+EXPOSE 8080
+
+ENTRYPOINT ["java"]
+CMD ["-jar", "./target/docker-example-1.1.3.jar"]
