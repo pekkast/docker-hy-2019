@@ -89,7 +89,7 @@ $ docker run -d -p 5000:5000 npm-docker-front
 
 ## 1.11
 ```console
-$ docker build -f ./Dockerfile-1.11 -t npm-docker-back
+$ docker build -f ./Dockerfile-1.11 -t npm-docker-back .
 $ docker run -d -p 8000:8000 -v $(pwd)/logs-1.11.txt:/usr/app/logs.txt npm-docker-back
 ```
 
@@ -97,7 +97,7 @@ $ docker run -d -p 8000:8000 -v $(pwd)/logs-1.11.txt:/usr/app/logs.txt npm-docke
 Add ENV variables to both Dockerfiles then build & run again
 ```console
 $ docker build -f ./Dockerfile-1.10 -t npm-docker-front .
-$ docker build -f ./Dockerfile-1.11 -t npm-docker-back
+$ docker build -f ./Dockerfile-1.11 -t npm-docker-back .
 $ docker run -d -p 8000:8000 -v $(pwd)/logs-1.11.txt:/usr/app/logs.txt npm-docker-back
 $ docker run -d -p 5000:5000 npm-docker-front
 ```
