@@ -1,0 +1,18 @@
+FROM ubuntu
+
+WORKDIR /usr/app
+
+RUN apt-get update \
+  && apt-get install -y git \
+  && git clone https://github.com/docker-hy/frontend-example-docker.git \
+  && apt-get install -y curl \
+  && curl -sL https://deb.nodesource.com/setup_10.x | bash \
+  && apt-get install -y nodejs \
+  && cd frontend-example-docker && npm i \
+  && npm i serve && npm run build
+
+COPY ./start-1.10.sh start.sh
+RUN chmod +x ./start.sh
+EXPOSE 5000
+
+ENTRYPOINT ["./start.sh"]

@@ -80,3 +80,9 @@ Yhdistetään palvelimeen localhost (localhost)|::1|:8002... yhdistetty.
 HTTP-pyyntö lähetetty, odotetaan vastausta... 200 OK
 Pituus: 28 [text/html]
 ```
+
+## 1.10
+```console
+$ docker build -f ./Dockerfile-1.10 -t npm-docker-front .
+$ docker run -d -p 5000:5000 npm-docker-front
+```
