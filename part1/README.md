@@ -59,6 +59,7 @@ $ docker run docker-clock
 ## 1.7
 ```console
 $ docker build -f ./Dockerfile-1.7 -t curler .
-
 $ docker run -it curler
+Input website:
+helsinki.fi
 ```
